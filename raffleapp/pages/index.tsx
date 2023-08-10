@@ -8,6 +8,7 @@ import { ethers } from "ethers";
 import RaffleStatus from "../components/raffleStatus";
 import { useState } from "react";
 import PrizeNFT from "../components/prizeNFT";
+import CurrentEntries from "../components/currentEntries";
 
 const Home: NextPage = () => {
 
@@ -125,6 +126,11 @@ const Home: NextPage = () => {
           </Stack>
         </Flex>
       </SimpleGrid>
+
+      <Stack mt={"40px"} textAlign={"center"}>
+        <Text fontSize={"xl"}>Current Raffle Entries:</Text>
+        <CurrentEntries />
+      </Stack>
     </Container>
   );
 };
