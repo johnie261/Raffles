@@ -1,6 +1,7 @@
 import { Card, Container, Divider, Flex, Heading } from "@chakra-ui/react"
 import AdminRaffleStatus from "../components/adminRaffleStatus"
 import AdminEntryCost from "../components/adminEntryCost"
+import AdminWidthdrawBalance from "../components/withdrawBalance"
 
 export default function Admin() {
   return (
@@ -11,6 +12,7 @@ export default function Admin() {
         <Card p={4} mt={4} mr={10} w={"25%"}>
           <AdminEntryCost />
           <Divider mt={4} />
+          <AdminWidthdrawBalance />
         </Card>
       </Flex>
     </Container>
