@@ -83,17 +83,16 @@ const Home: NextPage = () => {
                     textColor={"black.200"}
                   />
                   <Input
-                    value={entryAmount}
                     type={"number"}
                     onChange={(e) => setEntryAmount(parseInt(e.target.value))}
                     textAlign={"center"}
                     mx={2}
                   />
-                  <input 
+                  {/* <input 
                     type="number"
                     value={entryAmount}
                     onChange={(e) => setEntryAmount(parseInt(e.target.value))}
-                  />
+                  /> */}
                   <Button onClick={increaseAmount}>+</Button>
                 </Flex>
                 <Web3Button
