@@ -7,6 +7,7 @@ import { HERO_IMAGE_URL, RAFFLE_CONTRACT_ADDRESS } from "../const/addresses";
 import { ethers } from "ethers";
 import RaffleStatus from "../components/raffleStatus";
 import { useState } from "react";
+import PrizeNFT from "../components/prizeNFT";
 
 const Home: NextPage = () => {
 
@@ -47,11 +48,15 @@ const Home: NextPage = () => {
     <Container maxW={"1440px"} py={8}>
       <SimpleGrid columns={2} spacing={10} minH={"60vh"}>
         <Flex>
-          <MediaRenderer
-            src={HERO_IMAGE_URL}
-            width="100%"
-            height="100%"
-          />
+          {raffleStatus ? (
+            <PrizeNFT />
+          ) : (
+            <MediaRenderer
+              src={HERO_IMAGE_URL}
+              width="100%"
+              height="100%"
+            />
+          )}
         </Flex>
         <Flex justifyContent={"center"} alignItems={"center"} p={"5%"}>
           <Stack spacing={10}>
